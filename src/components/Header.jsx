@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, MapPin } from "lucide-react";
-import { AuthModal } from "./AuthModal";
+import { AuthModal } from "./AuthModal.jsx";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [authModal, setAuthModal] = useState<{ open: boolean; type: 'passenger' | 'driver' | null }>({ 
+  const [authModal, setAuthModal] = useState({ 
     open: false, 
     type: null 
   });
 
-  const openAuthModal = (type: 'passenger' | 'driver') => {
+  const openAuthModal = (type) => {
     setAuthModal({ open: true, type });
   };
 

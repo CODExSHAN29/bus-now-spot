@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import HowItWorks from "@/components/HowItWorks";
-import Footer from "@/components/Footer";
+import Header from "@/components/Header.jsx";
+import Hero from "@/components/Hero.jsx";
+import Features from "@/components/Features.jsx";
+import HowItWorks from "@/components/HowItWorks.jsx";
+import Footer from "@/components/Footer.jsx";
 
 const Index = () => {
   return (

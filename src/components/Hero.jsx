@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Users, Smartphone } from "lucide-react";
-import { AuthModal } from "./AuthModal";
+import { AuthModal } from "./AuthModal.jsx";
 import heroImage from "@/assets/hero-bus-app.jpg";
 
 const Hero = () => {
-  const [authModal, setAuthModal] = useState<{ open: boolean; type: 'passenger' | 'driver' | null }>({ 
+  const [authModal, setAuthModal] = useState({ 
     open: false, 
     type: null 
   });
 
-  const openAuthModal = (type: 'passenger' | 'driver') => {
+  const openAuthModal = (type) => {
     setAuthModal({ open: true, type });
   };
 

@@ -7,21 +7,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import { Mail, Facebook, Chrome, User, Bus } from "lucide-react";
 
-interface AuthModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  userType: 'passenger' | 'driver' | null;
-}
+// Props: { isOpen, onClose, userType }
 
-export const AuthModal = ({ isOpen, onClose, userType }: AuthModalProps) => {
+export const AuthModal = ({ isOpen, onClose, userType }) => {
   const [authTab, setAuthTab] = useState("login");
 
-  const handleSocialAuth = (provider: string) => {
+  const handleSocialAuth = (provider) => {
     console.log(`${provider} authentication for ${userType}`);
     // This would integrate with actual auth providers
   };
 
-  const handleEmailAuth = (e: React.FormEvent) => {
+  const handleEmailAuth = (e) => {
     e.preventDefault();
     console.log(`Email authentication for ${userType}`);
     // This would handle actual authentication
